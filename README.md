@@ -2,11 +2,24 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-1. [Prerequisites](#prerequisites)
-1. [Vitis HLS](#vitis-hls)
-1. [Vivado](#vivado)
-1. [Vitis](#vitis)
+* [Introduction](#introduction)
+* [Prerequisites](#prerequisites)
+1. [High Level Synthesis in Vitis HLS](#1-high-level-synthesis-in-vitis-hls)
+	1. [Create New Project](#11-create-new-project)
+	1. [Create Source fFles](#12-create-source-files)
+	1. [Get Source Code from Github](#13-get-source-code-from-github)
+	1. [Simulation and Synthesis](#14-simulation-and-synthesis)
+	1. [Export RTL as IP](#15-export-rtl-as-ip)
+1. [Hardware Setup in Vivado](#2-hardware-setup-in-vivado)
+	1. [Create New Project](#21-create-new-project)
+	1. [Create Block Design](#22-create-block-design)
+	1. [Create HDL Wrapper and Generate Bitstream](#23-create-hdl-wrapper-and-generate-bitstream)
+	1. [Export Hardware Platform](#24-export-hardware-platform)
+1. [Application Setup in Vitis](#3-application-setup-in-vitis)
+	1. [Create Platform Project](#31-create-platform-project)
+	1. [Create Application Project](#32-create-application-project)
+	1. [Get Source Code from Github](#33-get-source-code-from-github)
+	1. [Build and Run Project](#34-build-and-run-project)
 
 ## Introduction
 This is a complete guide for utilising a Vitis HLS design with the Zybo Zynq-7000 development board. We will use a simple `FIR` (Finite Impulse Response) algorithm as an example.
@@ -19,9 +32,9 @@ The guide has been made for the USN course CS4110 by Kent Odde and Stian Onarhei
 * Vitis HLS 2021.X
 * Zybo Zynq-7000 development board
 
-## 1. Vitis HLS
+## 1. High Level Synthesis in Vitis HLS
 
-### 1.1 Create new project
+### 1.1 Create New Project
 Open up Vitis HLS and choose `Create Project`.
 
 ![Image](img/vitis-hls-01.png)
@@ -99,7 +112,7 @@ Run the C Synthesis and ensure that the output looks something like this:
 
 The code is not optimised and has timing violations. Since this is only an example, this is fine.
 
-### 1.5 Export RTL as IP/XO
+### 1.5 Export RTL as IP
 
 In the Flow navigator window, press the `Export RTL` button and save the ZIP file in a suitable location.
 
@@ -115,7 +128,7 @@ It should look something like this:
 
 ![Image](img/vitis-hls-16.png)
 
-## 2. Vivado
+## 2. Hardware Setup
 
 ### 2.1 Create new project
 As we assume some familiarity with the Vivado Design Suite, we will not go over how to create a new project.
@@ -187,7 +200,7 @@ Clik the `OK` button.
 
 ![Image](img/vivado-14.png)
 
-### 2.3 Create HDL Wrapper and generate bitstream
+### 2.3 Create HDL Wrapper and Generate bitstream
 
 Right-click the design file under `Sources` and click `Create HDL Wrapper`.
 
@@ -223,7 +236,7 @@ Choose a suitable XSA file name and location. In the final window, click the `Fi
 
 ![Image](img/vivado-22.png)
 
-## 3. Vitis
+## 3. Application Setup in Vitis
 
 ### 3.1 Create Platform Project
 
@@ -279,7 +292,7 @@ You will now be met by the generated Application Project. It should look somethi
 
 ![Image](img/vitis-12.png)
 
-### 3.3 Copy paste file content from Git.
+### 3.3 Get Source Code from Github
 The source code can be found here:
 * [main.c](src/main.c)
 
