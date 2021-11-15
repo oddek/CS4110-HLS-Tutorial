@@ -6,7 +6,7 @@
 * [Prerequisites](#prerequisites)
 1. [High Level Synthesis in Vitis HLS](#1-high-level-synthesis-in-vitis-hls)
 	1. [Create New Project](#11-create-new-project)
-	1. [Create Source fFles](#12-create-source-files)
+	1. [Create Source Files](#12-create-source-files)
 	1. [Get Source Code from Github](#13-get-source-code-from-github)
 	1. [Simulation and Synthesis](#14-simulation-and-synthesis)
 	1. [Export RTL as IP](#15-export-rtl-as-ip)
@@ -22,7 +22,7 @@
 	1. [Build and Run Project](#34-build-and-run-project)
 
 ## Introduction
-This is a complete guide for utilising a Vitis HLS design with the Zybo Zynq-7000 development board. We will use a simple `FIR` (Finite Impulse Response) algorithm as an example.
+This is a complete guide for utilising a Vitis HLS design with the Zybo Zynq-7000 development board. We will use a simple FIR (Finite Impulse Response) moving average filter as an example.
 
 The guide has been made for the USN course CS4110 by Kent Odde and Stian Onarheim upon request of Professor Jose Ferreira.
 
@@ -60,7 +60,7 @@ Give the solution a suitable name and press `Finish`.
 
 ![Image](img/vitis-hls-06.png)
 
-### 1.2 Create source files
+### 1.2 Create Source Files
 On the left side in the Explorer window, right-click `Sources` and clik `New
 file`. Add the files `fir.c` and `fir.h`.
 
@@ -72,7 +72,7 @@ The file tree should now look like this:
 
 ![Image](img/vitis-hls-08.png)
 
-### 1.3 Copy paste file content from Git.
+### 1.3 Get Source Code from Github
 The source code can be found here:
 * [tb.c](src/hls/tb.c)
 * [fir.c](src/hls/fir.c)
@@ -92,7 +92,7 @@ The files should now look like this:
 
 ![Image](img/vitis-hls-11.png)
 
-### 1.4 Simulation and synthesis
+### 1.4 Simulation and Synthesis
 In the Flow navigator window as seen below:
 
 ![Image](img/vitis-hls-12.png)
@@ -128,9 +128,9 @@ It should look something like this:
 
 ![Image](img/vitis-hls-16.png)
 
-## 2. Hardware Setup
+## 2. Hardware Setup in Vivado
 
-### 2.1 Create new project
+### 2.1 Create New Project
 As we assume some familiarity with the Vivado Design Suite, we will not go over how to create a new project.
 Create a new Vivado project and do not create any files.
 
@@ -200,7 +200,7 @@ Clik the `OK` button.
 
 ![Image](img/vivado-14.png)
 
-### 2.3 Create HDL Wrapper and Generate bitstream
+### 2.3 Create HDL Wrapper and Generate Bitstream
 
 Right-click the design file under `Sources` and click `Create HDL Wrapper`.
 
