@@ -2,21 +2,18 @@
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-* [Example Programs](#example-programs)
-* [Source Code](#source-code)
-* [Computer](#computer)
-	* [CPU](#cpu)
-* [Assembler](#assembler)
-* [Usage](#usage)
-* [In Action](#in-action)
-* [License](#license)
-* [Contact](#contact)
+1. [Introduction](#introduction)
+1. [Prerequisites](#prerequisites)
+1. [Vitis HLS](#vitis-hls)
+1. [Vivado](#vivado)
+1. [Vitis](#vitis)
 
 ## Introduction
-This is a complete guide to utilising a Vitis HLS design with the Zybo Zynq-7000 development board. We will use a simple `FIR` (Finite Impulse Response) as an example.
+This is a complete guide for utilising a Vitis HLS design with the Zybo Zynq-7000 development board. We will use a simple `FIR` (Finite Impulse Response) algorithm as an example.
 
-## Prerequisits
+The guide has been made for the USN course CS4110 by Kent Odde and Stian Onarheim upon request of Professor Jose Ferreira.
+
+## Prerequisites
 * Vitis 2021.X
 * Viviado 2021.X
 * Vitis HLS 2021.X
@@ -27,28 +24,28 @@ This is a complete guide to utilising a Vitis HLS design with the Zybo Zynq-7000
 ### 1.1 Create new project
 Open up Vitis HLS and choose `Create Project`.
 
-![Hello](img/vitis-hls-01.png)
+![Image](img/vitis-hls-01.png)
 
-Give the project a suitable name and location, and click `Next`.
+Give the project a suitable name and location.
 
-![Hello](img/vitis-hls-02.png)
+![Image](img/vitis-hls-02.png)
 
 For now, skip adding design and testbench files. We will do this at a later
 stage. Click `Next`.
 
-![Hello](img/vitis-hls-03.png)
+![Image](img/vitis-hls-03.png)
 
-Clik the "Three dots button" under `Part Selection`.
+Clik the "Three vertical dots" button under `Part Selection`.
 
-![Hello](img/vitis-hls-04.png)
+![Image](img/vitis-hls-04.png)
 
-In the Device Selection Dialog pess `Boards` and search for `Zybo`.
+In the `Device Selection Dialog`, press `Boards` and search for `Zybo`.
 
-![Hello](img/vitis-hls-05.png)
+![Image](img/vitis-hls-05.png)
 
 Give the solution a suitable name and press `Finish`.
 
-![Hello](img/vitis-hls-06.png)
+![Image](img/vitis-hls-06.png)
 
 ### 1.2 Create source files
 On the left side in the Explorer window, right-click `Sources` and clik `New
@@ -56,11 +53,11 @@ file`. Add the files `fir.c` and `fir.h`.
 
 Right-click on `Test Bench`, click `New file` and add the file `tb.c`.
 
-![Hello](img/vitis-hls-07.png)
+![Image](img/vitis-hls-07.png)
 
 The file tree should now look like this:
 
-![Hello](img/vitis-hls-08.png)
+![Image](img/vitis-hls-08.png)
 
 ### 1.3 Copy paste file content from Git.
 The source code can be found here:
@@ -72,20 +69,20 @@ The files should now look like this:
 
 `fir.h`
 
-![Hello](img/vitis-hls-09.png)
+![Image](img/vitis-hls-09.png)
 
 `fir.c`
 
-![Hello](img/vitis-hls-10.png)
+![Image](img/vitis-hls-10.png)
 
 `tb.c`
 
-![Hello](img/vitis-hls-11.png)
+![Image](img/vitis-hls-11.png)
 
 ### 1.4 Simulation and synthesis
 In the Flow navigator window as seen below:
 
-![Hello](img/vitis-hls-12.png)
+![Image](img/vitis-hls-12.png)
 
 Run the C simulation and ensure that the output looks something like this:
 ```
@@ -98,7 +95,7 @@ Finished C simulation.
 
 Run the C Synthesis and ensure that the output looks something like this:
 
-![Hello](img/vitis-hls-13.png)
+![Image](img/vitis-hls-13.png)
 
 The code is not optimised and has timing violations. Since this is only an example, this is fine.
 
@@ -106,17 +103,17 @@ The code is not optimised and has timing violations. Since this is only an examp
 
 In the Flow navigator window, press the `Export RTL` button and save the ZIP file in a suitable location.
 
-![Hello](img/vitis-hls-14.png)
+![Image](img/vitis-hls-14.png)
 
 #### [Optional] View the waveform
 
 Run Cosimulation and press the `Waveform` button in the top menu and wait for the Vivado program to open.
 
-![Hello](img/vitis-hls-15.png)
+![Image](img/vitis-hls-15.png)
 
 It should look something like this:
 
-![Hello](img/vitis-hls-16.png)
+![Image](img/vitis-hls-16.png)
 
 ## 2. Vivado
 
@@ -127,104 +124,104 @@ Create a new Vivado project and do not create any files.
 Remember to select the correct board file. You can find it by searching for `Zybo`. (You might have to click the 'Refresh' button).
 Ensure that the `Board Rev` is `B.3`.
 
-![Hello](img/vivado-01.png)
+![Image](img/vivado-01.png)
 
 ### 2.2 Create Block Design
 
 In the `Flow Navigator` window, under `IP INTEGRATOR` click `Create Block Design`.
 
-![Hello](img/vivado-02.png)
+![Image](img/vivado-02.png)
 
 In the `Diagram` window, press the `+` button or right-click and press `Add IP`.
 
 Search for `Zynq` in the pop-up window and double-click `ZYNQ7 Processing System`.
 
-![Hello](img/vivado-03.png)
+![Image](img/vivado-03.png)
 
-Locate the ZIP file that we exported in step [1.5 FINPUSS](#15-export-rtl-as-ipxo), and unzip the file.
+Locate the ZIP file that we exported in step [1.5](#15-export-rtl-as-ipxo), and unzip the file.
 
-![Hello](img/vivado-04.png)
+![Image](img/vivado-04.png)
 
 Go back to the `Flow Navigator` window in Vivado and click `IP Catalog` under `PROJECT MANAGER`.
 
 Right-click anywhere in the `IP Catalog` tab and click `Add Repository` and select the folder that we unzipped.
 
-![Hello](img/vivado-05.png)
+![Image](img/vivado-05.png)
 
 Expand the `User Repository` folder and double-click `Fir`.
 
-![Hello](img/vivado-06.png)
+![Image](img/vivado-06.png)
 
 Click the `Add IP to Block Design` button.
 
-![Hello](img/vivado-07.png)
+![Image](img/vivado-07.png)
 
 Return to the `Diagram` window. It should now look something like this:
 
-![Hello](img/vivado-08.png)
+![Image](img/vivado-08.png)
 
 Click `Run Block Automation`.
 The presets should look like the image below. Click the `OK` button.
 
-![Hello](img/vivado-09.png)
+![Image](img/vivado-09.png)
 
 Click `Run Connection Automation`.
 The presets should look like the image below. Click the `OK` button.
 
-![Hello](img/vivado-10.png)
+![Image](img/vivado-10.png)
 
 Click the `Regenerate Layout` button located in the `Diagram` window's toolbar.
 
-![Hello](img/vivado-11.png)
+![Image](img/vivado-11.png)
 
 If everything is done correctly, the diagram should now look like this:
 
-![Hello](img/vivado-12.png)
+![Image](img/vivado-12.png)
 
 Click the `Validate Design` button located in the `Diagram` window's toolbar.
 
-![Hello](img/vivado-13.png)
+![Image](img/vivado-13.png)
 
 Ignore the four critical warning messages.
 Clik the `OK` button.
 
-![Hello](img/vivado-14.png)
+![Image](img/vivado-14.png)
 
 ### 2.3 Create HDL Wrapper and generate bitstream
 
-Right-click the design file unser `Sources` and click `Create HDL Wrapper`.
+Right-click the design file under `Sources` and click `Create HDL Wrapper`.
 
-![Hello](img/vivado-15.png)
+![Image](img/vivado-15.png)
 
 Select the `Let Vivado manage wrapper and auto-update` option and click the `OK` button.
 
-![Hello](img/vivado-16.png)
+![Image](img/vivado-16.png)
 
 In the `Flow Navigator` window, click the `Generate Bitstream` button located under `PROGRAM AND DEBUG`.
 
-![Hello](img/vivado-17.png)
+![Image](img/vivado-17.png)
 
 Click the `OK` button.
 
-![Hello](img/vivado-18.png)
+![Image](img/vivado-18.png)
 
 This will take some time. Eventually you will be met with a window like this:
 
-![Hello](img/vivado-19.png)
+![Image](img/vivado-19.png)
 
 ### 2.4 Export Hardware Platform
 
 Click `File` --> `Export` --> `Export Hardware`.
 
-![Hello](img/vivado-20.png)
+![Image](img/vivado-20.png)
 
 Choose the `Include bitstream` option and click the `Next` button.
 
-![Hello](img/vivado-21.png)
+![Image](img/vivado-21.png)
 
-Choose a suitable XSA file name and location, and click the `Next` button. In the final window, click the `Finish` button.
+Choose a suitable XSA file name and location. In the final window, click the `Finish` button.
 
-![Hello](img/vivado-22.png)
+![Image](img/vivado-22.png)
 
 ## 3. Vitis
 
@@ -232,55 +229,55 @@ Choose a suitable XSA file name and location, and click the `Next` button. In th
 
 Start Vitis IDE and choose a suitable location for your workspace.
 
-![Hello](img/vitis-01.png)
+![Image](img/vitis-01.png)
 
 When met by the welcome screen, choose `Create Platform Project`.
 
-![Hello](img/vitis-02.png)
+![Image](img/vitis-02.png)
 
 Choose a suitable platform project name and click `Next`.
 
-![Hello](img/vitis-03.png)
+![Image](img/vitis-03.png)
 
-Under `Hardware Spesification` click `Browse` and select the XSA file that we created in step LINK.
+Under `Hardware Spesification` click `Browse` and select the XSA file that we created in step [2.4](#24-export-hardware-platform).
 
 Ensure that the `Software Specification` section matches the image below, and click `Finish`.
 
-![Hello](img/vitis-04.png)
+![Image](img/vitis-04.png)
 
 After the project has been generated, you will be met with this window.
 
-![Hello](img/vitis-05.png)
+![Image](img/vitis-05.png)
 
 In the `Explorer` window on the left, right-click the platform project, and click `Build Project`.
 
-![Hello](img/vitis-06.png)
+![Image](img/vitis-06.png)
 
 ### 3.2 Create Application Project
 
 Create the Application Project. Click `File` --> `New` --> `Application Project`.
 
-![Hello](img/vitis-07.png)
+![Image](img/vitis-07.png)
 
-Select the platform that we have created and click `Next`.
+Select the platform you created previously and click `Next`.
 
-![Hello](img/vitis-08.png)
+![Image](img/vitis-08.png)
 
 Give the Application Project a suitable name and click `Next`.
 
-![Hello](img/vitis-09.png)
+![Image](img/vitis-09.png)
 
 Click `Next`.
 
-![Hello](img/vitis-10.png)
+![Image](img/vitis-10.png)
 
 Select the `Hello World` template and click `Finish`.
 
-![Hello](img/vitis-11.png)
+![Image](img/vitis-11.png)
 
 You will now be met by the generated Application Project. It should look something like this:
 
-![Hello](img/vitis-12.png)
+![Image](img/vitis-12.png)
 
 ### 3.3 Copy paste file content from Git.
 The source code can be found here:
@@ -292,15 +289,25 @@ Swap the file content of `helloworld.c` with `src/main.c` from the Git repositor
 
 In the Explorer window, right-click your application and choose `Build Project`.
 
-![Hello](img/vitis-13.png)
+![Image](img/vitis-13.png)
 
+Remember to set the boot mode jumper (21 in the Figure) to JTAG mode (to the far right).
 
+![Image](img/vitis-15.png)
 
-![Hello](img/vitis-14.png)
+Then right-click your application again and choose `Run As` --> `Launch Hardware`.
 
+![Image](img/vitis-14.png)
 
+Use a serial communication tool (screen, PuTTY) to interact with your application running on the Zybo.
 
+![Image](img/vitis-16.png)
 
+It should look something like this:
 
+At all times it should print out the moving average of the three last entered characters.
 
+For instance, entering the sequence `a b c` repeatedly, should result in only `b`'s as output as this will
+be the current moving average.
 
+![Image](img/vitis-17.png)
