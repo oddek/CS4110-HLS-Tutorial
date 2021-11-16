@@ -112,6 +112,12 @@ Run the C Synthesis and ensure that the output looks something like this:
 
 The code is not optimised and has timing violations. Since this is only an example, this is fine.
 
+#### [Optional] Improve the latency
+
+Swap out the content of `fir.c` with [fir_improved.c](src/hls/fir_improved.c) and run C Synthesis again.
+
+![Image](img/vitis-hls-17.png)
+
 ### 1.5 Export RTL as IP
 
 In the Flow navigator window, press the `Export RTL` button and save the ZIP file in a suitable location.
