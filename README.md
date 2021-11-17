@@ -122,11 +122,16 @@ Swap out the content of `fir.c` with [fir_improved.c](src/hls/fir_improved.c) an
 
 ![Image](img/vitis-hls-17.png)
 
+
+
 ### 1.5 Export RTL as IP
 
-In the Flow navigator window, press the `Export RTL` button and save the ZIP file in a suitable location.
+In the Flow navigator window, press the `Export RTL` button and save the ZIP file in a suitable location. When prompted by the `Run Cosimulation` window, keep it set to `Verilog`, and set dump trace to `all` in order to later see the waveform. (See image below).
 
 ![Image](img/vitis-hls-14.png)
+
+![Image](img/vitis-hls-cosimulation.png)
+
 
 #### [Optional] View the waveform
 
