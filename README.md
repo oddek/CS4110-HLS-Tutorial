@@ -50,7 +50,7 @@ stage. Click `Next`.
 
 ![Image](img/vitis-hls-03.png)
 
-Clik the "Three vertical dots" button under `Part Selection`.
+Clik the "Three horizontal dots" button under `Part Selection`.
 
 ![Image](img/vitis-hls-04.png)
 
