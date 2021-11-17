@@ -92,6 +92,10 @@ The files should now look like this:
 
 ![Image](img/vitis-hls-11.png)
 
+Go to `Project` --> `Project Settings` --> `Syntesis`. Select `fir.c` and click `Browse` to select the top level function for synthesis. In our case this is `fir`.
+
+![Image](img/vitis-set-top-function.png)
+
 ### 1.4 Simulation and Synthesis
 In the Flow navigator window as seen below:
 
