@@ -32,6 +32,8 @@ The guide has been made for the USN course CS4110 by Kent Odde and Stian Onarhei
 * Vitis HLS 2021.X
 * Zybo Zynq-7000 development board
 
+
+
 ## 1. High Level Synthesis in Vitis HLS
 
 ### 1.1 Create New Project
@@ -53,6 +55,11 @@ Clik the "Three vertical dots" button under `Part Selection`.
 ![Image](img/vitis-hls-04.png)
 
 In the `Device Selection Dialog`, press `Boards` and search for `Zybo`.
+To install board files, look at Jose and Manuels guide [here](https://usn.instructure.com/courses/24824/pages/w2-day-1-zybo-hw-development-tutorial?module_item_id=269761).
+
+If the board does not show up, try clicking `Boards` again after searching and the board should appear. 
+
+If on Linux, also follow the instructions in the last post [here](https://forum.digilentinc.com/topic/16795-vivado-hls-board-files-for-the-zyboz7-20/)
 
 ![Image](img/vitis-hls-05.png)
 
