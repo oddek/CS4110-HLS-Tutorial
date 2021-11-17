@@ -55,7 +55,9 @@ Clik the "Three vertical dots" button under `Part Selection`.
 ![Image](img/vitis-hls-04.png)
 
 In the `Device Selection Dialog`, press `Boards` and search for `Zybo`.
-To install board files, look at Jose and Manuels guide [here](https://usn.instructure.com/courses/24824/pages/w2-day-1-zybo-hw-development-tutorial?module_item_id=269761)
+To install board files, look at Jose and Manuels guide [here](https://usn.instructure.com/courses/24824/pages/w2-day-1-zybo-hw-development-tutorial?module_item_id=269761).
+
+If the board does not show up, try clicking `Boards` again after searching and the board should appear. 
 
 If on Linux, also follow the instructions in the last post [here](https://forum.digilentinc.com/topic/16795-vivado-hls-board-files-for-the-zyboz7-20/)
 
