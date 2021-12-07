@@ -20,6 +20,7 @@
 	1. [Create Application Project](#32-create-application-project)
 	1. [Get Source Code from Github](#33-get-source-code-from-github)
 	1. [Build and Run Project](#34-build-and-run-project)
+1. [Further Reading](#further-reading)
 
 ## Introduction
 This is a complete guide for utilising a Vitis HLS design with the Zybo Zynq-7000 development board. We will use a simple FIR (Finite Impulse Response) moving average filter as an example.
@@ -346,3 +347,9 @@ For instance, entering the sequence `a b c` repeatedly, should result in only `b
 be the current moving average.
 
 ![Image](img/vitis-17.png)
+
+
+
+# Further Reading
+
+See section 4 in the [Vitis High-Level Synthesis User Guide](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug1399-vitis-hls.pdf) for more information about the AXI4-Lite slave C drivers.
