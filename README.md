@@ -51,7 +51,7 @@ stage. Click `Next`.
 
 ![Image](img/vitis-hls-03.png)
 
-Clik the "Three vertical dots" button under `Part Selection`.
+Click the "Three horizontal dots" button under `Part Selection`.
 
 ![Image](img/vitis-hls-04.png)
 
@@ -60,7 +60,7 @@ To install board files, look at Jose and Manuels guide [here](https://usn.instru
 
 If the board does not show up, try clicking `Boards` again after searching and the board should appear. 
 
-If on Linux, also follow the instructions in the last post [here](https://forum.digilentinc.com/topic/16795-vivado-hls-board-files-for-the-zyboz7-20/)
+If on Linux, also follow the instructions in the last post [here](https://forum.digilentinc.com/topic/16795-vivado-hls-board-files-for-the-zyboz7-20/).
 
 ![Image](img/vitis-hls-05.png)
 
@@ -69,7 +69,7 @@ Give the solution a suitable name and press `Finish`.
 ![Image](img/vitis-hls-06.png)
 
 ### 1.2 Create Source Files
-On the left side in the Explorer window, right-click `Sources` and clik `New
+On the left side in the Explorer window, right-click `Sources` and click `New
 file`. Add the files `fir.c` and `fir.h`.
 
 Right-click on `Test Bench`, click `New file` and add the file `tb.c`.
@@ -219,7 +219,7 @@ Click the `Validate Design` button located in the `Diagram` window's toolbar.
 ![Image](img/vivado-13.png)
 
 Ignore the four critical warning messages.
-Clik the `OK` button.
+Click the `OK` button.
 
 ![Image](img/vivado-14.png)
 
