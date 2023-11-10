@@ -193,7 +193,8 @@ Create a new Vivado project and do not create any files.
 Remember to select the correct board file. You can find it by searching for `Zybo`. (You might have to click the 'Refresh' button).
 Ensure that the `Board Rev` is `B.4`.
 
-![Image](img/vivado-01.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/82e9f247-3f18-49d1-b703-1acfa834cc00)
+
 
 ### 2.2 Create Block Design
 
