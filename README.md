@@ -362,7 +362,7 @@ Specify a name and click next.
 
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f0f9644e-5f2d-4840-9171-ed080b3ee248)
 
-Select the Fir_platform from earlier
+Select the `Fir_Platform` from earlier
 
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f5d41ca4-3d3a-4e7c-9e1d-60f3d1248503)
 
