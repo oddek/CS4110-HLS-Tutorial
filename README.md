@@ -200,7 +200,10 @@ Ensure that the `Board Rev` is `B.4`.
 
 In the `Flow Navigator` window, under `IP INTEGRATOR` click `Create Block Design`.
 
-![Image](img/vivado-02.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/68607a17-9a05-4e05-91a1-2041f21b8ed6)
+
+Click `OK`
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/440003db-0a06-4876-aa57-98b9373fa0ab)
 
 In the `Diagram` window, press the `+` button or right-click and press `Add IP`.
 
@@ -208,9 +211,19 @@ Search for `Zynq` in the pop-up window and double-click `ZYNQ7 Processing System
 
 ![Image](img/vivado-03.png)
 
-Locate the ZIP file that we exported in step [1.5](#15-export-rtl-as-ipxo), and unzip the file.
+In Vitis 2023.2, click `RUN` under `PACKAGE`
 
-![Image](img/vivado-04.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/7156413c-a005-40a2-9a30-afa65a836a29)
+
+
+Locate the ZIP file that we just exported, and unzip the file.
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/61909568-4206-4d44-a4ff-feaf16e9d704)
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/8f8f7514-82b2-4f13-a62e-90b1fa8c886f)
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/11b09d5e-034c-4f86-86dc-d02e097baf7f)
+
 
 Go back to the `Flow Navigator` window in Vivado and click `IP Catalog` under `PROJECT MANAGER`.
 
