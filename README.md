@@ -203,6 +203,7 @@ In the `Flow Navigator` window, under `IP INTEGRATOR` click `Create Block Design
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/68607a17-9a05-4e05-91a1-2041f21b8ed6)
 
 Click `OK`
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/440003db-0a06-4876-aa57-98b9373fa0ab)
 
 In the `Diagram` window, press the `+` button or right-click and press `Add IP`.
