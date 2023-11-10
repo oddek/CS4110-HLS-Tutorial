@@ -38,47 +38,52 @@ The guide has been made for the USN course CS4110 by Kent Odde and Stian Onarhei
 ## 1. High Level Synthesis in Vitis HLS
 
 ### 1.1 Create New Project
-Open up Vitis HLS and choose `Create Project`.
+Open up Vitis 2023.2 and choose `Open Workspace`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/41b6197c-7f92-4b0e-9d10-09e3f0f22790)
 
-![Image](img/vitis-hls-01.png)
+Choose where to create the workspace, create a new folder, and select that folder as the workspace.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/0f875eb0-73c2-48b2-a31e-982e611b9ab9)
 
-Give the project a suitable name and location.
+After the workspace has loaded, click the `Create HLS Component` button.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/63b93914-d99f-462c-b4ce-b0e988f28b5f)
 
-![Image](img/vitis-hls-02.png)
+Set a name for the hls component and click `Next`
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/d6c2f056-5f84-4f46-9e62-65375dde6ac0)
+
+Leave as is and click `Next`
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/77e4584b-e3db-4a26-9d66-fe528a5a69b5)
 
 For now, skip adding design and testbench files. We will do this at a later
 stage. Click `Next`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/7a1059a6-f684-4cf3-a2f1-9efacd0ae852)
 
-![Image](img/vitis-hls-03.png)
+Find the correct part and click `Next`
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/e2f555bf-4c96-46b5-b718-a74516c41ca6)
 
-Click the "Three horizontal dots" button under `Part Selection`.
+Leave as is and click `Next`
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/94db124d-1eff-4650-92a3-88a87ed19b5e)
 
-![Image](img/vitis-hls-04.png)
+Click `Finish`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/13accd00-4dd6-4167-add4-caab39039b9a)
 
-In the `Device Selection Dialog`, press `Boards` and search for `Zybo`.
-To install board files, look at Jose and Manuels guide [here](https://usn.instructure.com/courses/24824/pages/w2-day-1-zybo-hw-development-tutorial?module_item_id=269761).
-
-If the board does not show up, try clicking `Boards` again after searching and the board should appear. 
-
-If on Linux, also follow the instructions in the last post [here](https://forum.digilentinc.com/topic/16795-vivado-hls-board-files-for-the-zyboz7-20/).
-
-![Image](img/vitis-hls-05.png)
-
-Give the solution a suitable name and press `Finish`.
-
-![Image](img/vitis-hls-06.png)
 
 ### 1.2 Create Source Files
-On the left side in the Explorer window, right-click `Sources` and click `New
-file`. Add the files `fir.c` and `fir.h`.
+On the left side in the Explorer window, right-click `Sources` and click `Add Source
+File`. 
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/89330e01-683f-4fcf-b57d-52249bc8e95c)
 
-Right-click on `Test Bench`, click `New file` and add the file `tb.c`.
+Add the files `fir.c` and `fir.h`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/22040adf-fdd3-4ccc-907f-e87acebebc23)
 
-![Image](img/vitis-hls-07.png)
+Right-click on `Test Bench`, click `Add Test Bench File`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/72d2b99b-d56d-428e-8df3-c18312965541)
+
+Add the file `tb.c`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/95d23d3a-26e4-49d4-825f-d918468cbe32)
+
 
 The file tree should now look like this:
-
-![Image](img/vitis-hls-08.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/f4c514e4-89eb-4707-a2c2-481fab28efee)
 
 ### 1.3 Get Source Code from Github
 The source code can be found here:
@@ -90,66 +95,94 @@ The files should now look like this:
 
 `fir.h`
 
-![Image](img/vitis-hls-09.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/5e716d2e-da83-488c-b124-8bf63b93c1eb)
 
 `fir.c`
 
-![Image](img/vitis-hls-10.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/48953be3-61f2-4bb5-9edb-275bfe898053)
 
 `tb.c`
 
-![Image](img/vitis-hls-11.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/44191923-92fa-4693-952d-70a1fbc1f74e)
 
-Go to `Project` --> `Project Settings` --> `Syntesis`. Select `fir.c` and click `Browse` to select the top level function for synthesis. In our case this is `fir`.
+Click gear-icon on the right side of `C SYNTHESIS`. 
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/8a97578e-bdc7-402b-a446-4815b781716f)
 
-![Image](img/vitis-set-top-function.png)
+Search for top.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/130cef9e-c8a4-4943-8f92-b5f73a71b4c3)
+
+Click `Browse` to select the top level function for synthesis. In our case this is `fir.c` and click `OK`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/eac6f38d-d292-4972-a638-7f45267b1760)
 
 ### 1.4 Simulation and Synthesis
-In the Flow navigator window as seen below:
-
-![Image](img/vitis-hls-12.png)
+In the Flow navigator window:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/273e78ba-3053-49b2-a2e7-e4a83d4ba9b3)
 
 Run the C simulation and ensure that the output looks something like this:
 ```
-utput:  Abbbbbbbbbbbbbbbbbb
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 23.45 seconds. CPU system time: 1.31 seconds. Elapsed time: 24.48 seconds; current allocated memory: 251.756 MB.
-Finished C simulation.
+ Output:  Abbbbbbbbbbbbbbbbbb
+ INFO: [SIM 211-1] CSim done with 0 errors.
+ INFO: [SIM 211-3] *************** CSIM finish ***************
+ INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 23.032 seconds; current allocated memory: 0.934 MB.
+ INFO: [HLS 200-1510] Running: close_project 
+ INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 28.659 seconds; peak allocated memory: 169.469 MB.
+ INFO: [Common 17-206] Exiting vitis_hls at Fri Nov 10 14:14:04 2023...
+ INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 48s
+ C-simulation finished successfully
 ```
 
-Run the C Synthesis and ensure that the output looks something like this:
+Run the C Synthesis
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/fe1055c6-d84a-4f88-91da-e508b646a08b)
 
-![Image](img/vitis-hls-13.png)
+Ensure that the report looks something like this:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/853a4733-3bf6-4a5d-8799-5508cd622f6d)
+
 
 The code is not optimised and has timing violations. Since this is only an example, this is fine.
 
 #### [Optional] Improve the latency
 
 Swap out the content of `fir.c` with [fir_improved.c](src/hls/fir_improved.c) and run C Synthesis again.
-
-![Image](img/vitis-hls-17.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/0aed7147-ee45-40f0-8979-a89713e7a09c)
 
 
 
 ### 1.5 Export RTL as IP
 
-In the Flow navigator window, press the `Export RTL` button and save the ZIP file in a suitable location. When prompted by the `Run Cosimulation` window, keep it set to `Verilog`, and set dump trace to `all` in order to later see the waveform. (See image below).
+Keep as `Verilog` 
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/14935579-0a29-40d6-851a-34e8cba95204)
 
-![Image](img/vitis-hls-14.png)
+Set trace level to `all` in order to later see the waveform.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/c47f1cec-4b5c-4666-a32d-6926206cace0)
 
-![Image](img/vitis-hls-cosimulation.png)
+In the Flow navigator window, click `Run` under the  `C/RTL COSIMULATION`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/e57ac0ce-f9fc-453b-b66d-1e588d823134)
 
 
 #### [Optional] View the waveform
 
 Run Cosimulation and press the `Waveform` button in the top menu and wait for the Vivado program to open.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/1efb7b7f-cabc-4b22-8d5e-91412becda06)
 
-![Image](img/vitis-hls-15.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/87db3f53-0eea-4a51-8afb-8c75b74777e3)
 
-It should look something like this:
+Locate the `Block-level handshake`
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/a9f57bcd-cf70-4ce7-8c18-d1e2dc5f60ac)
 
-![Image](img/vitis-hls-16.png)
+And drag it to the top
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/0c5a8843-aa35-4bb7-8565-ec855c2f9c09)
+
+Locate the `input_r__output_r__return(axi_slave)`
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/414e0fa8-3935-447c-b568-22a5f0d45e1d)
+
+And drag it to the top
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/3e3f2b7f-ed79-403f-b6d7-5ee05cbbb1ec)
+
+Remove the rest, and inspect the waveform
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/9bf3dd87-1791-4dfa-a958-6856363c3d96)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/162e5a5a-61b0-49a3-b4db-6d53c944b800)
+
+
 
 ## 2. Hardware Setup in Vivado
 
