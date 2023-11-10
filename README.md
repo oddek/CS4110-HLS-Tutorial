@@ -158,7 +158,7 @@ As we assume some familiarity with the Vivado Design Suite, we will not go over 
 Create a new Vivado project and do not create any files.
 
 Remember to select the correct board file. You can find it by searching for `Zybo`. (You might have to click the 'Refresh' button).
-Ensure that the `Board Rev` is `B.3`.
+Ensure that the `Board Rev` is `B.4`.
 
 ![Image](img/vivado-01.png)
 
