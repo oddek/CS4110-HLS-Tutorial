@@ -262,46 +262,66 @@ Choose a suitable XSA file name and location. In the final window, click the `Fi
 ## 3. Application Setup in Vitis
 
 ### 3.1 Create Platform component
-We will now make a platform component.
+
 Continue in your vitis workspace, and click + button:
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/bfb1d0e8-bff1-47a7-b013-a9a09673ec57)
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/d61bad9c-bb0f-4919-9fdf-064b72fe74fb)
 
 
 Choose a suitable platform project name and click `Next`.
 
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/ea58675b-70e8-4b57-8367-13f5d71600cc)
+
 Select Hardware Design, and specify the XSA file that we created in step [2.4](#24-export-hardware-platform).
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/27376a35-07d9-4099-88a3-2d6165f5614b)
 
 
 Ensure that the `Software Specification` section matches the image below, and click `Finish`.
 
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/9693ae3f-1d94-4c28-8fdd-47aa77e6d407)
+
 Click finish.
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/17c3d5a6-f477-44d5-91dd-8bf2af08fb3a)
 
 Wait for Vitis to complete loading:
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/08c0d5a5-0515-4de3-976c-b8f23f5e3d59)
 
 Click build:
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/d8c0114b-87ea-40be-aec9-e73db30fa090)
 
 
 ### 3.2 Create Application Project
 
 Click file>New Component>From Examples
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/2a19d31d-6207-4a14-8929-fa09dc35886b)
+
 Select Hello World
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/551ac999-a5bd-4349-adf1-5c4a52c4270c)
+
 Click the button "Create Application component from template" without changing any of the options.
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/a46f36c9-f12e-41a7-b04e-9ebae7062ddc)
+
 Specify a name and click next.
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f0f9644e-5f2d-4840-9171-ed080b3ee248)
+
 Select the Fir_platform from earlier
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f5d41ca4-3d3a-4e7c-9e1d-60f3d1248503)
+
 Should look like this:
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/b2316fee-2a98-4db0-bf02-9586b6f42172)
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/9c041f0e-770a-49cc-b154-94d89d2ccd0f)
 
 
@@ -312,11 +332,16 @@ The source code can be found here:
 Swap the file content of `helloworld.c` with `src/main.c` from the Git repository.
 
 ### 3.4 Build and Run Project
+
 Build the component
+
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/8e3534e9-8974-47fd-bd9d-f2d4d73c9bcf)
 
 
 Remember to set the boot mode jumper (21 in the Figure) to JTAG mode (to the far right).
+
+!!!!!!!
+
 ![Image](img/vitis-15.png)
 
 Then right-click your application again and choose `Run As` --> `Launch Hardware`.
