@@ -261,15 +261,11 @@ Choose a suitable XSA file name and location. In the final window, click the `Fi
 
 ## 3. Application Setup in Vitis
 
-### 3.1 Create Platform Project
+### 3.1 Create Platform component
+Continue in your vitis workspace, and click + button:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/bfb1d0e8-bff1-47a7-b013-a9a09673ec57)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/d61bad9c-bb0f-4919-9fdf-064b72fe74fb)
 
-Start Vitis IDE and choose a suitable location for your workspace.
-
-![Image](img/vitis-01.png)
-
-When met by the welcome screen, choose `Create Platform Project`.
-
-![Image](img/vitis-02.png)
 
 Choose a suitable platform project name and click `Next`.
 
