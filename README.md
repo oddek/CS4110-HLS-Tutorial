@@ -262,6 +262,7 @@ Choose a suitable XSA file name and location. In the final window, click the `Fi
 ## 3. Application Setup in Vitis
 
 ### 3.1 Create Platform component
+We will now make a platform component.
 Continue in your vitis workspace, and click + button:
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/bfb1d0e8-bff1-47a7-b013-a9a09673ec57)
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/d61bad9c-bb0f-4919-9fdf-064b72fe74fb)
@@ -269,47 +270,40 @@ Continue in your vitis workspace, and click + button:
 
 Choose a suitable platform project name and click `Next`.
 
-![Image](img/vitis-03.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/ea58675b-70e8-4b57-8367-13f5d71600cc)
+Select Hardware Design, and specify the XSA file that we created in step [2.4](#24-export-hardware-platform).
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/27376a35-07d9-4099-88a3-2d6165f5614b)
 
-Under `Hardware Spesification` click `Browse` and select the XSA file that we created in step [2.4](#24-export-hardware-platform).
 
 Ensure that the `Software Specification` section matches the image below, and click `Finish`.
 
-![Image](img/vitis-04.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/9693ae3f-1d94-4c28-8fdd-47aa77e6d407)
+Click finish.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/17c3d5a6-f477-44d5-91dd-8bf2af08fb3a)
 
-After the project has been generated, you will be met with this window.
+Wait for Vitis to complete loading:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/08c0d5a5-0515-4de3-976c-b8f23f5e3d59)
 
-![Image](img/vitis-05.png)
+Click build:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/d8c0114b-87ea-40be-aec9-e73db30fa090)
 
-In the `Explorer` window on the left, right-click the platform project, and click `Build Project`.
-
-![Image](img/vitis-06.png)
 
 ### 3.2 Create Application Project
 
-Create the Application Project. Click `File` --> `New` --> `Application Project`.
+Click file>New Component>From Examples
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/2a19d31d-6207-4a14-8929-fa09dc35886b)
+Select Hello World
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/551ac999-a5bd-4349-adf1-5c4a52c4270c)
+Click the button "Create Application component from template" without changing any of the options.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/a46f36c9-f12e-41a7-b04e-9ebae7062ddc)
+Specify a name and click next.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f0f9644e-5f2d-4840-9171-ed080b3ee248)
+Select the Fir_platform from earlier
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f5d41ca4-3d3a-4e7c-9e1d-60f3d1248503)
+Should look like this:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/b2316fee-2a98-4db0-bf02-9586b6f42172)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/9c041f0e-770a-49cc-b154-94d89d2ccd0f)
 
-![Image](img/vitis-07.png)
-
-Select the platform you created previously and click `Next`.
-
-![Image](img/vitis-08.png)
-
-Give the Application Project a suitable name and click `Next`.
-
-![Image](img/vitis-09.png)
-
-Click `Next`.
-
-![Image](img/vitis-10.png)
-
-Select the `Hello World` template and click `Finish`.
-
-![Image](img/vitis-11.png)
-
-You will now be met by the generated Application Project. It should look something like this:
-
-![Image](img/vitis-12.png)
 
 ### 3.3 Get Source Code from Github
 The source code can be found here:
@@ -318,13 +312,11 @@ The source code can be found here:
 Swap the file content of `helloworld.c` with `src/main.c` from the Git repository.
 
 ### 3.4 Build and Run Project
+Build the component
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/8e3534e9-8974-47fd-bd9d-f2d4d73c9bcf)
 
-In the Explorer window, right-click your application and choose `Build Project`.
-
-![Image](img/vitis-13.png)
 
 Remember to set the boot mode jumper (21 in the Figure) to JTAG mode (to the far right).
-
 ![Image](img/vitis-15.png)
 
 Then right-click your application again and choose `Run As` --> `Launch Hardware`.
