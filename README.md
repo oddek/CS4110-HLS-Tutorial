@@ -393,6 +393,19 @@ Remember to set the boot mode jumper (21 in the Figure) to JTAG mode (to the far
 ![Image](img/vitis-15.png)
 
 
+Click the gear-icon to the right of `Run` under `Component`
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/5e2a797b-450b-4488-9905-c765667e1a2b)
+
+If `Board Initialization` is set to TCL, you might get an error.
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/4cdad469-cbb3-4ef2-b509-6d29d48e1898)
+
+Set `Board Initialization` to FSBL
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/72263169/7102ddc8-a264-4b8c-826b-04d93142249e)
+
+
 Run the component while the Zybo board is connected.
 
 ![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/e5b9d479-f683-4fe9-8ee7-7306ebc1d55f)
