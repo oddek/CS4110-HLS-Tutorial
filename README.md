@@ -158,7 +158,7 @@ As we assume some familiarity with the Vivado Design Suite, we will not go over 
 Create a new Vivado project and do not create any files.
 
 Remember to select the correct board file. You can find it by searching for `Zybo`. (You might have to click the 'Refresh' button).
-Ensure that the `Board Rev` is `B.3`.
+Ensure that the `Board Rev` is `B.4`.
 
 ![Image](img/vivado-01.png)
 
@@ -261,59 +261,69 @@ Choose a suitable XSA file name and location. In the final window, click the `Fi
 
 ## 3. Application Setup in Vitis
 
-### 3.1 Create Platform Project
+### 3.1 Create Platform component
 
-Start Vitis IDE and choose a suitable location for your workspace.
+Continue in your vitis workspace, and click + button:
 
-![Image](img/vitis-01.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/bfb1d0e8-bff1-47a7-b013-a9a09673ec57)
 
-When met by the welcome screen, choose `Create Platform Project`.
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/d61bad9c-bb0f-4919-9fdf-064b72fe74fb)
 
-![Image](img/vitis-02.png)
 
 Choose a suitable platform project name and click `Next`.
 
-![Image](img/vitis-03.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/ea58675b-70e8-4b57-8367-13f5d71600cc)
 
-Under `Hardware Spesification` click `Browse` and select the XSA file that we created in step [2.4](#24-export-hardware-platform).
+Select Hardware Design, and specify the XSA file that we created in step [2.4](#24-export-hardware-platform).
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/27376a35-07d9-4099-88a3-2d6165f5614b)
+
 
 Ensure that the `Software Specification` section matches the image below, and click `Finish`.
 
-![Image](img/vitis-04.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/9693ae3f-1d94-4c28-8fdd-47aa77e6d407)
 
-After the project has been generated, you will be met with this window.
+Click finish.
 
-![Image](img/vitis-05.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/17c3d5a6-f477-44d5-91dd-8bf2af08fb3a)
 
-In the `Explorer` window on the left, right-click the platform project, and click `Build Project`.
+Wait for Vitis to complete loading:
 
-![Image](img/vitis-06.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/08c0d5a5-0515-4de3-976c-b8f23f5e3d59)
+
+Click build:
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/d8c0114b-87ea-40be-aec9-e73db30fa090)
+
 
 ### 3.2 Create Application Project
 
-Create the Application Project. Click `File` --> `New` --> `Application Project`.
+Click file>New Component>From Examples
 
-![Image](img/vitis-07.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/2a19d31d-6207-4a14-8929-fa09dc35886b)
 
-Select the platform you created previously and click `Next`.
+Select Hello World
 
-![Image](img/vitis-08.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/551ac999-a5bd-4349-adf1-5c4a52c4270c)
 
-Give the Application Project a suitable name and click `Next`.
+Click the button "Create Application component from template" without changing any of the options.
 
-![Image](img/vitis-09.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/a46f36c9-f12e-41a7-b04e-9ebae7062ddc)
 
-Click `Next`.
+Specify a name and click next.
 
-![Image](img/vitis-10.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f0f9644e-5f2d-4840-9171-ed080b3ee248)
 
-Select the `Hello World` template and click `Finish`.
+Select the Fir_platform from earlier
 
-![Image](img/vitis-11.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/f5d41ca4-3d3a-4e7c-9e1d-60f3d1248503)
 
-You will now be met by the generated Application Project. It should look something like this:
+Should look like this:
 
-![Image](img/vitis-12.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/b2316fee-2a98-4db0-bf02-9586b6f42172)
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/9c041f0e-770a-49cc-b154-94d89d2ccd0f)
+
 
 ### 3.3 Get Source Code from Github
 The source code can be found here:
@@ -323,31 +333,39 @@ Swap the file content of `helloworld.c` with `src/main.c` from the Git repositor
 
 ### 3.4 Build and Run Project
 
-In the Explorer window, right-click your application and choose `Build Project`.
+Build the component
 
-![Image](img/vitis-13.png)
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/8e3534e9-8974-47fd-bd9d-f2d4d73c9bcf)
+
 
 Remember to set the boot mode jumper (21 in the Figure) to JTAG mode (to the far right).
 
+
+
 ![Image](img/vitis-15.png)
 
-Then right-click your application again and choose `Run As` --> `Launch Hardware`.
 
-![Image](img/vitis-14.png)
+Run the component while the Zybo board is connected.
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/e5b9d479-f683-4fe9-8ee7-7306ebc1d55f)
+
 
 Use a serial communication tool (screen, PuTTY) to interact with your application running on the Zybo.
 
-![Image](img/vitis-16.png)
+We will use putty:
 
-It should look something like this:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/b12dd09e-03a7-469a-b0e0-7e2680651591)
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/e9f9d375-0611-46d1-8f32-91d2b6fc0853)
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/36ab285d-57cd-488d-8ea7-5b2c354d52c8)
 
 At all times it should print out the moving average of the three last entered characters.
 
-For instance, entering the sequence `a b c` repeatedly, should result in only `b`'s as output as this will
+For instance, entering the sequence `a b c` repeatedly, should result in only `b`'s as output, as this will
 be the current moving average.
 
-![Image](img/vitis-17.png)
-
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/355d18e0-ce80-42ab-8e4d-0ea8118a6683)
 
 
 # Further Reading
