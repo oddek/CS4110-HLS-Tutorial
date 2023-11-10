@@ -340,27 +340,32 @@ Build the component
 
 Remember to set the boot mode jumper (21 in the Figure) to JTAG mode (to the far right).
 
-!!!!!!!
+
 
 ![Image](img/vitis-15.png)
 
-Then right-click your application again and choose `Run As` --> `Launch Hardware`.
 
-![Image](img/vitis-14.png)
+Run the component while the Zybo board is connected.
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/e5b9d479-f683-4fe9-8ee7-7306ebc1d55f)
+
 
 Use a serial communication tool (screen, PuTTY) to interact with your application running on the Zybo.
 
-![Image](img/vitis-16.png)
+We will use putty:
 
-It should look something like this:
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/b12dd09e-03a7-469a-b0e0-7e2680651591)
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/e9f9d375-0611-46d1-8f32-91d2b6fc0853)
+
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/36ab285d-57cd-488d-8ea7-5b2c354d52c8)
 
 At all times it should print out the moving average of the three last entered characters.
 
-For instance, entering the sequence `a b c` repeatedly, should result in only `b`'s as output as this will
+For instance, entering the sequence `a b c` repeatedly, should result in only `b`'s as output, as this will
 be the current moving average.
 
-![Image](img/vitis-17.png)
-
+![image](https://github.com/MartinJrgsn/CS4110-HLS-Tutorial/assets/115153285/355d18e0-ce80-42ab-8e4d-0ea8118a6683)
 
 
 # Further Reading
